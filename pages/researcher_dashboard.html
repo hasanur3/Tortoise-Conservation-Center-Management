@@ -35,6 +35,16 @@
     .content {
       flex-grow: 1;
       background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    .card-custom{
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 10px;
     }
 
     @media (max-width: 768px) {
@@ -75,9 +85,47 @@
 
     <div class="container-fluid mt-4">
       <h2>Welcome, Researcher</h2>
-      <p>Use the sidebar to view tortoise data, breeding, environment info, or generate reports.</p>
+        <p>Use the sidebar to view tortoise data, breeding, environment info, or generate reports.</p>
+
+        <!-- Population Status -->
+      <div class="row g-4">
+        <!-- Population Status -->
+
+         <div class="col-md-6 col-lg-3">
+          <div class="card card-custom p-3">
+            <h5 class="card-title text-success"><i class="bi bi-tree-fill"></i> Population Status</h5>
+            <h3>325 Tortoises</h3>
+            <p class="text-muted">Monitored in this reserve</p>
+          </div>
+         </div>
+
+    <!-- Health Monitoring -->
+<div class="col-md-6 col-lg-3">
+  <div class="card card-custom p-3">
+    <h5 class="card-title text-danger"><i class="bi bi-heart-pulse-fill"></i> Health Status</h5>
+    <h3>89% Healthy</h3>
+    <p class="text-muted">Monitored through sensors</p>
+  </div>
+ </div>
+
+ <!-- GPS Tracking -->
+  <div class="col-md-6 col-lg-3">
+    <div class="card card-custom p-3">
+      <h5 class="card-title text-primary"><i class="bi bi-geo-alt-fill"></i> GPS Tracking</h5>
+      <h3>12 Active Trackers</h3>
+      <p class="text-muted">Live movement monitoring</p>
     </div>
   </div>
+  <!-- Weekly Movement -->
+   <div class="col-md-12 col-lg-3">
+    <div class="card card-custom p-3">
+      <h5 class="card-title text-warning"><i class="bi bi-bar-chart-line-fill"></i> Weekly Movement</h5>
+      <h3>Avg 3.1 km</h3>
+      <p class="text-muted">Weekly tracked movement</p>
+    </div>
+   </div>
+  </div>
+</div>
 
   <script>
     function toggleSidebar() {
