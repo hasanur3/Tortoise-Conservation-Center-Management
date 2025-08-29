@@ -21,10 +21,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/index.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/index.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="/pages/signup.html">Signup</a></li>
+        <li class="nav-item"><a class="nav-link" href="/pages/signup.php">Signup</a></li>
       </ul>
     </div>
   </nav>
@@ -56,7 +56,7 @@
           <button type="submit" class="btn btn-success">Login</button>
         </div>
         <div class="text-center">
-          <a href="signup.html" class="btn btn-link text-success">Sign Up</a>
+          <a href="signup.php" class="btn btn-link text-success">Sign Up</a>
         </div>
       </form>
     </div>
