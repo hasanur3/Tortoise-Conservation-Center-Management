@@ -149,31 +149,31 @@
         <a href="#" class="nav-link active"><i class="bi bi-house-door"></i> <span>Dashboard</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/tortoise.html" class="nav-link"><i class="bi bi-bug"></i> <span>Tortoises</span></a>
+        <a href="/pages/tortoise.php" class="nav-link"><i class="bi bi-bug"></i> <span>Tortoises</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/enclosure.html" class="nav-link"><i class="bi bi-tree"></i> <span>Enclosures</span></a>
+        <a href="/pages/enclosure.php" class="nav-link"><i class="bi bi-tree"></i> <span>Enclosures</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/breeding.html" class="nav-link"><i class="bi bi-egg"></i> <span>Breeding</span></a>
+        <a href="/pages/breeding.php" class="nav-link"><i class="bi bi-egg"></i> <span>Breeding</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/feeding.html" class="nav-link"><i class="bi bi-nut"></i> <span>Feeding</span></a>
+        <a href="/pages/feeding.php" class="nav-link"><i class="bi bi-nut"></i> <span>Feeding</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/health.html" class="nav-link"><i class="bi bi-heart-pulse"></i> <span>Health</span></a>
+        <a href="/pages/health.php" class="nav-link"><i class="bi bi-heart-pulse"></i> <span>Health</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/environment.html" class="nav-link"><i class="bi bi-thermometer-half"></i> <span>Environment</span></a>
+        <a href="/pages/environment.php" class="nav-link"><i class="bi bi-thermometer-half"></i> <span>Environment</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/staff.html" class="nav-link"><i class="bi bi-people"></i> <span>Staff</span></a>
+        <a href="/pages/staff.php" class="nav-link"><i class="bi bi-people"></i> <span>Staff</span></a>
       </li>
       <li class="nav-item">
-        <a href="/pages/reports.html" class="nav-link"><i class="bi bi-pie-chart"></i> <span>Reports</span></a>
+        <a href="/pages/reports.php" class="nav-link"><i class="bi bi-pie-chart"></i> <span>Reports</span></a>
       </li>
       <li class="nav-item mt-auto">
-        <a href="/index.html" class="nav-link">
+        <a href="/index.php" class="nav-link">
           <i class="bi bi-box-arrow-right"></i> <span>Logout</span>
         </a>
       </li>

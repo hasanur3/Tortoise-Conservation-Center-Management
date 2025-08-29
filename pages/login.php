@@ -12,7 +12,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-success px-4">
-    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+    <a class="navbar-brand d-flex align-items-center" href="/index.php">
       <img src="/assests/image/logo.jpeg" alt="Logo" style="height: 40px; width: auto;" class="me-2 rounded" />
   Tortoise Tracker
 </a>
@@ -118,16 +118,16 @@
         // Redirect based on role
         switch (role) {
           case "admin":
-            window.location.href = "/pages/admin.html";
+            window.location.href = "/pages/admin.php";
             break;
           case "staff":
-            window.location.href = "/pages/staff_dashboard.html";
+            window.location.href = "/pages/staff_dashboard.php";
             break;
           case "vet":
-            window.location.href = "/pages/veterinarian_dashboard.html";
+            window.location.href = "/pages/veterinarian_dashboard.php";
             break;
           case "researcher":
-            window.location.href = "/pages/researcher_dashboard.html";
+            window.location.href = "/pages/researcher_dashboard.php";
             break;
           default:
             alert("Role not recognized.");

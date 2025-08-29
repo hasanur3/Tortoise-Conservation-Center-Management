@@ -63,7 +63,7 @@
     <div class="hero-content">
       <h1 class="fw-bold">Protect. Monitor. Conserve.</h1>
       <p>A Smart System For Tortoise Welfare and Habitat Management</p>
-      <a href="pages/login.html" class="btn btn-success btn-lg mt-3 px-4">Login</a>
+      <a href="pages/login.php" class="btn btn-success btn-lg mt-3 px-4">Login</a>
     </div>
   </section>
 
