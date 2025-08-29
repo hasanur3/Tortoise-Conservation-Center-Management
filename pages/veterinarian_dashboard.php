@@ -138,11 +138,11 @@
           </thead>
           <tbody>
             <tr>
-              <td>T123</td>
-              <td>2024-02-10</td>
-              <td>Amoxicillin</td>
-              <td>3 capsules daily</td>
-              <td>Recovered well</td>
+              <td>T001</td>
+              <td>2025-07-19</td>
+              <td>Antibiotics</td>
+              <td>Treated for shell infection</td>
+              <td>Monitor recovery closely</td>
             </tr>
           </tbody>
         </table>
