@@ -66,6 +66,8 @@
           <th>Contact</th>
           <th>Assigned Task</th>
           <th>Task Status</th>
+          <th>Medical Checkup</th>
+          <th>Habitat Maintainance</th>
           <th>Assigned Date</th>
           <th>Due Date</th>
           <th>Actions</th>
@@ -80,6 +82,8 @@
           <td>+880123456789</td>
           <td>Daily Feeding</td>
           <td><span class="status-inprogress">In Progress</span></td>
+          <td>Last checkup: Jan 2025, Blood test normal</td>
+          <td>Cleaned weekly, Temperature controlled</td>
           <td>2025-07-15</td>
           <td>2025-07-19</td>
           <td>
@@ -129,6 +133,14 @@
             <div class="col-md-12">
               <label for="taskName" class="form-label">Task Name</label>
               <input type="text" id="taskName" class="form-control" placeholder="e.g. Daily Feeding" required />
+            </div>
+            <div class="col-md-14">
+              <label for="medicalCheckup" class="form-label">Medical Checkup</label>
+              <input type="text" id="medicalCheckup" class="form-control" placeholder="e.g. Last checkup: Jan 2025" required />
+            </div>
+            <div class="col-md-16">
+              <label for="habitatMaintainance" class="form-label">Habitat Maintainance</label>
+              <input type="text" id="habitatMaintainance" class="form-control" placeholder="e.g. Cleaned weekly" required />
             </div>
             <div class="col-md-4">
               <label for="taskStatus" class="form-label">Task Status</label>
