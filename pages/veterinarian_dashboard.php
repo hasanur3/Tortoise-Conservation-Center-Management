@@ -163,9 +163,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>T123</td>
-              <td>Rabies</td>
-              <td>2024-01-20</td>
+              <td>T001</td>
+              <td>ShellGuard</td>
+              <td>2025-07-15</td>
             </tr>
           </tbody>
         </table>
