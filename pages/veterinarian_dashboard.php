@@ -111,11 +111,11 @@
           </thead>
           <tbody>
             <tr>
-              <td>T123</td>
-              <td>2024-03-15</td>
-              <td>Stable</td>
-              <td>Eating well</td>
-              <td>No concerns</td>
+              <td>T001</td>
+              <td>2025-07-20</td>
+              <td>Good</td>
+              <td>Active and eating well</td>
+              <td>No issues</td>
             </tr>
           </tbody>
         </table>
@@ -138,11 +138,11 @@
           </thead>
           <tbody>
             <tr>
-              <td>T123</td>
-              <td>2024-02-10</td>
-              <td>Amoxicillin</td>
-              <td>3 capsules daily</td>
-              <td>Recovered well</td>
+              <td>T001</td>
+              <td>2025-07-19</td>
+              <td>Antibiotics</td>
+              <td>Treated for shell infection</td>
+              <td>Monitor recovery closely</td>
             </tr>
           </tbody>
         </table>
@@ -163,9 +163,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>T123</td>
-              <td>Rabies</td>
-              <td>2024-01-20</td>
+              <td>T001</td>
+              <td>ShellGuard</td>
+              <td>2025-07-15</td>
             </tr>
           </tbody>
         </table>
