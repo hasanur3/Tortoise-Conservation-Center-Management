@@ -66,11 +66,11 @@
   <div class="sidebar" id="sidebar">
     <h4 class="text-center py-3">Researcher Panel</h4>
     <a href="#"><i class="bi bi-house-door-fill"></i> Dashboard</a>
-    <a href="/pages/researcher-tortoise.html"><i class="bi bi-bug-fill"></i> Tortoise Data</a>
-    <a href="/pages/researcher-breeding.html"><i class="bi bi-heart-pulse-fill"></i> Breeding</a>
-    <a href="/pages/researcher-environment.html"><i class="bi bi-cloud-sun-fill"></i> Environment</a>
-    <a href="/pages/researcher-report.html"><i class="bi bi-graph-up-arrow"></i> Reports</a>
-    <a href="/index.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    <a href="/pages/researcher-tortoise.php"><i class="bi bi-bug-fill"></i> Tortoise Data</a>
+    <a href="/pages/researcher-breeding.php"><i class="bi bi-heart-pulse-fill"></i> Breeding</a>
+    <a href="/pages/researcher-environment.php"><i class="bi bi-cloud-sun-fill"></i> Environment</a>
+    <a href="/pages/researcher-report.php"><i class="bi bi-graph-up-arrow"></i> Reports</a>
+    <a href="/index.php"><i class="bi bi-box-arrow-right"></i> Logout</a>
   </div>
 
   <!-- Main Content -->
