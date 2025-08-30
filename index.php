@@ -52,8 +52,8 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="pages/login.html">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="pages/signup.html">Sign Up</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/login.php">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/signup.php">Sign Up</a></li>
       </ul>
     </div>
   </nav>

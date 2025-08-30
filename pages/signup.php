@@ -55,10 +55,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body style="background-color: #e9f5ea;">
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-success px-4">
-    <a class="navbar-brand d-flex align-items-center" href="/index.html">
+    <a class="navbar-brand d-flex align-items-center" href="/index.php">
       <img src="/assests/image/logo.jpeg" alt="Logo" style="height: 40px; width: auto;" class="me-2 rounded" />
-      Tortoise Tracker
-    </a>
+  Tortoise Tracker
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
+      </ul>
+    </div>
   </nav>
 
   <div class="container d-flex justify-content-center align-items-center vh-100">
@@ -104,5 +114,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </form>
     </div>
   </div>
+
+
+  <!-- Footer Start -->
+<footer class="bg-success text-white pt-4 mt-5">
+  <div class="container">
+    <div class="row text-start text-md-start align-items-center">
+      <!-- Logo and Info -->
+      <div class="col-md-4 mb-4">
+        <img src="/assests/image/logo.jpeg" alt="Logo" class="img-fluid mb-2" style="max-width: 100px; border-radius: 50%;">
+        <h5 class="fw-bold mt-2">Tortoise Tracker</h5>
+        <p>Dedicated to the care, research, and conservation of tortoise species.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Dashboard</a></li>
+          <li><a href="/contact.php" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Contact Us</h5>
+        <p>Email: info@tortoisetracker.org</p>
+        <p>Phone: +880 1234-567890</p>
+        <p>Location: Dhaka, Bangladesh</p>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center py-3 border-top border-light mt-3">
+      &copy; 2025 Tortoise Conservation Center. All rights reserved.
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+
 </body>
 </html>

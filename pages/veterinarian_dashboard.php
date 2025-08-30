@@ -77,7 +77,7 @@ $vaccinations = $conn->query("SELECT * FROM vet_vaccinations ORDER BY `Vaccinati
     <a href="/pages/vet-medical-treatments.php"><i class="bi bi-capsule-pill"></i>Medical Treatments</a>
     <a href="/pages/vet_vaccinations.php"><i class="bi bi-shield-plus"></i>Vaccinations</a>
     <a href="/pages/vet-environment.php"><i class="bi bi-cloud-sun"></i>Environment</a>
-    <a href="/index.html" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    <a href="/index.php" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
   </div>
 
   <!-- Main Content -->
