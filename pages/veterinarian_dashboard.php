@@ -1,3 +1,26 @@
+<?php
+// Connect to MySQL database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tortoise_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch Health Records
+$healthRecords = $conn->query("SELECT * FROM health_records ORDER BY `AssessmentDate` DESC");
+
+// Fetch Medical Treatments
+$medicalTreatments = $conn->query("SELECT * FROM medical_treatments ORDER BY `TreatmentDate` DESC");
+
+// Fetch Vaccinations
+$vaccinations = $conn->query("SELECT * FROM vet_vaccinations ORDER BY `VaccinationDate` DESC");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,10 +73,10 @@
   <div class="sidebar">
     <h4 class="text-center py-3 border-bottom">Veterinarian</h4>
     <a href="#" class="active"><i class="bi bi-speedometer2"></i>Dashboard</a>
-    <a href="/pages/vet-health-records.html"><i class="bi bi-journal-medical"></i>Health Records</a>
-    <a href="/pages/vet-medical-treatments.html"><i class="bi bi-capsule-pill"></i>Medical Treatments</a>
-    <a href="/pages/vet-vaccinations.html"><i class="bi bi-shield-plus"></i>Vaccinations</a>
-    <a href="/pages/vet-environment.html"><i class="bi bi-cloud-sun"></i>Environment</a>
+    <a href="/pages/vet-health-records.php"><i class="bi bi-journal-medical"></i>Health Records</a>
+    <a href="/pages/vet-medical-treatments.php"><i class="bi bi-capsule-pill"></i>Medical Treatments</a>
+    <a href="/pages/vet_vaccinations.php"><i class="bi bi-shield-plus"></i>Vaccinations</a>
+    <a href="/pages/vet-environment.php"><i class="bi bi-cloud-sun"></i>Environment</a>
     <a href="/index.html" onclick="logout()"><i class="bi bi-box-arrow-right"></i> Logout</a>
   </div>
 
@@ -62,61 +85,34 @@
     <h2>Welcome Veterinarian!</h2>
     <p>This dashboard helps you manage health-related records for tortoises.</p>
 
-    <!-- Dashboard Cards -->
-    <div class="row mb-4">
-      <div class="col-md-4">
-        <div class="card text-bg-success card-custom">
-          <div class="card-header">Today's Health Checks</div>
-          <div class="card-body">
-            <h5 class="card-title">5 Scheduled</h5>
-            <p class="card-text">Check the health tab for details.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="card text-bg-info card-custom">
-          <div class="card-header">Pending Treatments</div>
-          <div class="card-body">
-            <h5 class="card-title">3 Treatments</h5>
-            <p class="card-text">Update records once completed.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="card text-bg-warning card-custom">
-          <div class="card-header">Upcoming Vaccinations</div>
-          <div class="card-body">
-            <h5 class="card-title">2 Due This Week</h5>
-            <p class="card-text">Plan schedules in advance.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Health Records -->
     <div class="card mb-4 card-custom">
       <div class="card-header bg-success text-white">Health Records</div>
-      <div class="card-body">
+      <div class="card-body table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
               <th>Tortoise ID</th>
-              <th>Date</th>
+              <th>Assessment Date</th>
               <th>Status</th>
               <th>Observations</th>
               <th>Vet Comments</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>T001</td>
-              <td>2025-07-20</td>
-              <td>Good</td>
-              <td>Active and eating well</td>
-              <td>No issues</td>
-            </tr>
+            <?php if ($healthRecords->num_rows > 0): ?>
+              <?php while($row = $healthRecords->fetch_assoc()): ?>
+                <tr>
+                  <td><?= htmlspecialchars($row['TortoiseID']) ?></td>
+                  <td><?= htmlspecialchars($row['AssessmentDate']) ?></td>
+                  <td><?= htmlspecialchars($row['HealthStatus']) ?></td>
+                  <td><?= htmlspecialchars($row['Observations']) ?></td>
+                  <td><?= htmlspecialchars($row['VetComments']) ?></td>
+                </tr>
+              <?php endwhile; ?>
+            <?php else: ?>
+              <tr><td colspan="5" class="text-center">No records found</td></tr>
+            <?php endif; ?>
           </tbody>
         </table>
       </div>
@@ -125,25 +121,31 @@
     <!-- Medical Treatments -->
     <div class="card mb-4 card-custom">
       <div class="card-header bg-info text-white">Medical Treatments</div>
-      <div class="card-body">
+      <div class="card-body table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
               <th>Tortoise ID</th>
-              <th>Date</th>
+              <th>Treatment Date</th>
               <th>Medication</th>
               <th>Description</th>
               <th>Vet Notes</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>T001</td>
-              <td>2025-07-19</td>
-              <td>Antibiotics</td>
-              <td>Treated for shell infection</td>
-              <td>Monitor recovery closely</td>
-            </tr>
+            <?php if ($medicalTreatments->num_rows > 0): ?>
+              <?php while($row = $medicalTreatments->fetch_assoc()): ?>
+                <tr>
+                  <td><?= htmlspecialchars($row['TortoiseID']) ?></td>
+                  <td><?= htmlspecialchars($row['TreatmentDate']) ?></td>
+                  <td><?= htmlspecialchars($row['Medication']) ?></td>
+                  <td><?= htmlspecialchars($row['Description']) ?></td>
+                  <td><?= htmlspecialchars($row['VetNotes']) ?></td>
+                </tr>
+              <?php endwhile; ?>
+            <?php else: ?>
+              <tr><td colspan="5" class="text-center">No records found</td></tr>
+            <?php endif; ?>
           </tbody>
         </table>
       </div>
@@ -152,21 +154,27 @@
     <!-- Vaccination Records -->
     <div class="card mb-4 card-custom">
       <div class="card-header bg-warning text-dark">Vaccination Records</div>
-      <div class="card-body">
+      <div class="card-body table-responsive">
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
               <th>Tortoise ID</th>
               <th>Vaccine Type</th>
-              <th>Date</th>
+              <th>Vaccination Date</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>T001</td>
-              <td>ShellGuard</td>
-              <td>2025-07-15</td>
-            </tr>
+            <?php if ($vaccinations->num_rows > 0): ?>
+              <?php while($row = $vaccinations->fetch_assoc()): ?>
+                <tr>
+                  <td><?= htmlspecialchars($row['TortoiseID']) ?></td>
+                  <td><?= htmlspecialchars($row['VaccineType']) ?></td>
+                  <td><?= htmlspecialchars($row['VaccinationDate']) ?></td>
+                </tr>
+              <?php endwhile; ?>
+            <?php else: ?>
+              <tr><td colspan="3" class="text-center">No records found</td></tr>
+            <?php endif; ?>
           </tbody>
         </table>
       </div>
@@ -184,3 +192,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php
+$conn->close();
+?>
