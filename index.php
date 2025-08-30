@@ -129,7 +129,7 @@
 
   <!-- Call to Action -->
   <div class="text-center my-5">
-    <a href="pages/login.html" class="btn btn-success btn-lg px-5">Login</a>
+    <a href="pages/login.php" class="btn btn-success btn-lg px-5">Login</a>
   </div>
 
   <!-- Footer Start -->
